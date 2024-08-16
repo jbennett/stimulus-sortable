@@ -23,6 +23,9 @@
   "main": "dist/stimulus-sortable.umd.js",
   "module": "dist/stimulus-sortable.mjs",
   "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "tsc --noEmit && eslint --ext .js,.mjs,.ts . && prettier . --check",
     "lintfix": "eslint --ext .js,.mjs,.ts . --fix && prettier . --write",
@@ -31,7 +34,8 @@
     "prod": "vite build --mode netlify",
     "build": "vite build && yarn types",
     "version": "yarn build",
-    "np": "np --no-2fa --no-tests"
+    "np": "np --no-2fa --no-tests",
+    "prepare": "yarn build"
   },
   "devDependencies": {
     "@babel/core": "7.24.3",
